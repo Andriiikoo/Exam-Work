@@ -30,7 +30,8 @@ html, body {
 
 .header {
     background-color: hwb(0 100% 0% / 0.326);
-    position: fixed;
+    position: absolute;
+    z-index: 2;
     top: 30px;
     width: 100%;
 }
@@ -79,6 +80,7 @@ ul {
 
 .hero {
     height: 1030px;
+    position: relative;
 }
 
 .hero__bg__img {
@@ -90,7 +92,8 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding-top: 260px;
+    position: absolute; 
+    top: 260px; 
 }
 
 .hero__title {
@@ -144,30 +147,351 @@ ul {
 
 .info-container {
     height: 670px;
-    margin-top: -170px;
+    margin-top: -325px;
+    position: relative;
 }
 
 .info__img__content {
     width: 570px;
+    position: relative;
+}
+
+.info__img {
+    width: 100%;
 }
 
 .info__text__content {
     width: 770px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     padding-top: 45px;
     padding-bottom: 45px;
     background-color: #ffffffa0;
+    position: absolute;
+    right: 0;
+    top: 6%;
 }
 
 .info__description {
-    width: 400px;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    right: 0;
+}
+
+.info__metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .info__metric__item {
-    width: 370px;
+    width: 45%;
+    text-align: center;
+}
+
+
+.text__opacity_10 {
+    font-size: 40px;
+    opacity: 10%;
 }
 
 .info__text_large {
     font-family: "Playfair Display", serif;
     font-style: normal;
     font-size: 68px;
+}
+
+.line {
+    display: block;
+    width: 100px;
+    height: 2px;
+    color: #85BBB1;
+}
+.info__btn {
+    margin-top: 20px;
+}
+
+.benefits {
+    margin: 120px auto;
+}
+
+.benefits__grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+}
+
+.benefits__grid__item {
+    padding: 50px 30px;
+    border-top-style: solid;
+    border-top-color: #E4E4E4;
+    border-top-width: 1px;
+}
+
+
+.benefits__title, 
+.video__title, 
+.reviews__title,
+.contact__title
+ {
+    font-family: "Playfair Display";
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+.quote__bg {
+    margin: 0 auto;
+    height: 400px;
+}
+
+.quote__container {
+    position: absolute;
+    padding-left: 100px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.quote__content {
+    position: relative;
+}
+
+.quote__title {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #E4E4E4;
+    width: 60%;
+    padding-bottom: 40px;
+}
+
+.quote__text__wrap {
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.quote__text {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    color: #E4E4E4;
+}
+
+.quote__image__wrap {
+    width: 100px;
+    height: 85px;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    z-index: 5;
+}
+
+.video__container {
+    max-width: 970px;
+    position: relative;
+}
+
+.video__content {
+    width: 870px;
+    height: 539px;
+    position: absolute;
+    left: 50px;
+    top: 30px;   
+}
+
+.video__txt__content {
+    margin-top: 50px;
+    margin-bottom: 120px;
+    posi
+}
+
+.promises {
+    height: 540px;
+    margin-bottom: 120px;
+}
+
+.promises__container {
+    position: relative;
+}
+
+.promises__img__wrap {
+    width: 45%;
+}
+
+.promises__txt__wrap {
+    background-color: #ffffffad;
+    width: 65%;
+    padding: 75px 0 75px 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px 70px;
+    position: absolute;
+    right: 0;
+    top: 10%;
+}
+
+.promises__txt__item {
+    width: 300px;
+}
+
+.promises__title {
+    font-family: "Playfair Display";
+    font-size: 24px;
+}
+
+.promises__btn__wrap {
+    padding: 33px 89px;
+    border-style: solid;
+    border-color: #E4E4E4;
+    border-width: 1px;
+}
+
+.reviews {
+    margin-bottom: 120px;
+}
+
+.reviews__title__wrap {
+    max-width: 400px;
+    margin-bottom: 50px;
+}
+
+.reviews__item {
+    max-width: 340px;
+    position: relative;
+}
+
+.reviews__bg__img {
+    width: 100%;
+}
+
+.reviews__item__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.reviews__txt__wrap {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.reviews__txt_white {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.reviews__txt_ital {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.contact__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 60px;
+    border-top-style: solid;
+    border-top-color: #E4E4E4;
+    border-top-width: 1px;
+}
+
+.contact__title__wrap {
+    max-width: 470px;
+}
+
+.contact__form__wrap {
+    max-width: 470px;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+.contact__form input,
+.contact__form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 5px;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-style: italic;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+    border-color: #F1897B;
+}
+
+.contact__form textarea {
+    height: 80px;
+    resize: none;
+}
+
+.footer {
+    background-color: #ffffff;
+    margin-top: 100px;
+    font-size: 14px;
+    color: #262A3F;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    padding: 30px 0;
+    border-top-style: solid;
+    border-top-color: #E4E4E4;
+    border-top-width: 1px;
+}
+
+.footer__copyright {
+    font-family: "Lato", sans-serif;
+}
+
+.footer__credits {
+    font-family: "Lato", sans-serif;
+}
+
+.footer__author {
+    font-weight: 700;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #262A3F;
+    transition: color 0.3s;
+}
+
+.footer__link:hover {
+    color: #F1897B;
 }
